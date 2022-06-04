@@ -5,7 +5,7 @@
  *
  *Return: 0
  */
-xint main(void)
+int main(void)
 {
 	char letter;
 
