@@ -16,7 +16,7 @@ int main(void)
 		{
 			putchar((n1d1 % 10) + '0');
 			putchar((n1d2 % 10) + '0');
-			puchar(' ');
+			putchar(' ');
 		}
 	}
 	for (n2d1 = 0; n2d1 < 10; n2d1++)
