@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  *print_to_98 - Prints from a number to 98 in order
@@ -8,31 +8,16 @@
 
 void print_to_98(int n)
 {
-	int start;
-
-	if (n > 98)
+	if (n >= 98)
 	{
-		for (start = n; start >= 98; start--)
-		{
-			_putchar((start / 10) + '0');
-			_putchar((start % 10) + '0');
-			if (start == 98)
-				break;
-			_putchar(',');
-			_putchar(' ');
-		}
+		while (n > 98)
+			printf("%d, ", n--);
+		printf("%d\n", n);
 	}
 	else
 	{
-		for (start = n; n <= 98; start++)
-		{
-			_putchar((start / 10) + '0');
-			_putchar((start % 10) + '0');
-			if (start == 98)
-				break;
-			_putchar(',');
-			_putchar(' ');
-		}
+		while (n < 98)
+			printf("%d, ", n++);
+		printf("%d\n", n);
 	}
-	_putchar('\n');
 }
