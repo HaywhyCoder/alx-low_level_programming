@@ -16,6 +16,8 @@ void print_to_98(int n)
 		{
 			_putchar((start / 10) + '0');
 			_putchar((start % 10) + '0');
+			if (start == 98)
+				break;
 			_putchar(',');
 			_putchar(' ');
 		}
@@ -26,6 +28,8 @@ void print_to_98(int n)
 		{
 			_putchar((start / 10) + '0');
 			_putchar((start % 10) + '0');
+			if (start == 98)
+				break;
 			_putchar(',');
 			_putchar(' ');
 		}
