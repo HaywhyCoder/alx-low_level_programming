@@ -5,7 +5,7 @@
  *
  */
 
-void jack_bauner(void)
+void jack_bauer(void)
 {
 	int hour, minute;
 
