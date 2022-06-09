@@ -21,6 +21,5 @@ int main(void)
 		else
 			print("%d ", num);
 	}
-	putchar('\n');
 	return (0);
 }
