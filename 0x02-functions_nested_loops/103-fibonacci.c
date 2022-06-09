@@ -16,8 +16,8 @@ int main(void)
 		sum = num1 + num2;
 		num1 = num2;
 		num2 = sum;
-		if (sum % 2 == 0)
-			total += sum;		
+		if ((sum % 2) == 0)
+			total += sum;
 	}
 	printf("%d\n", total);
 	return (0);
