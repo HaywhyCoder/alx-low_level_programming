@@ -11,7 +11,7 @@ int main(void)
 	int i = 0;
 	long int num1, num2, sum;
 
-	while (i <50)
+	while (i < 50)
 	{
 		sum = num1 + num2;
 		num1 = num2;
@@ -22,6 +22,7 @@ int main(void)
 			printf("\n");
 		else
 			printf(", ");
-   	}
+		i++;
+	}
 	return (0);
 }
