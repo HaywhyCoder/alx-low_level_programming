@@ -8,8 +8,8 @@
 
 int main(void)
 {
-	unsigned long num1, num2, sum;
-	int total;
+	unsigned long num1 = 0, num2 = 1, sum = 0;
+	int total = 0;
 
 	while (sum < 4000000)
 	{
