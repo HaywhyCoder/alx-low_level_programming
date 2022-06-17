@@ -11,7 +11,7 @@ char *cap_string(char *str)
 {
 	int i;
 
-	for (i = -0; str[i] != '\0'; i++)
+	while (str[i])
 	{
 		while (!(str[i] >= 'a' && str[i] <= 'z'))
 			i++;
@@ -27,8 +27,11 @@ char *cap_string(char *str)
 		   str[i] == '(' ||
 		   str[i] == ')' ||
 		   str[i] == '{' ||
-		   str[i] == '}')
+		   str[i] == '}' ||
+			i == 0)
 			str[i + 1] -= 32;
+
+		i++;
 	}
 	return (str);
 }
