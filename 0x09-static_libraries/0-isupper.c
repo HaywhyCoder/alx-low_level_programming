@@ -7,6 +7,6 @@
  *Return: 1 if upper,0 if otherwise
  */
 
-int _isupper(int c)
+void _isupper(void)
 {
 }
