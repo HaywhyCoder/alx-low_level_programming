@@ -6,7 +6,8 @@
  *@argc: argument counter
  *@argv: argument vector
  *
- *Return: 0
+ *Return: 1 if number of argument passed is not 2
+ *        0 if otherwise.
  */
 
 int main(int argc, char *argv[])
