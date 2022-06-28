@@ -15,26 +15,24 @@ int main(int argc, char *argv[])
 
 	ans = 0;
 	cent = atoi(argv[1]);
-	if (argc == 2)
-	{
-		if (cent < 0)
-			printf("0\n");
-		while (cent > 0)
-		{
-			for (i = 0; i < 5; i++)
-			{
-				if (cent < coins[i])
-					continue;
-				ans += (cent / coins[i]);
-				cent %= coins[i];
-			}
-		}
-		printf("%d\n", ans);
-	}
-	else
+
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+
+	while (cent > 0)
+	{
+		for (i = 0; i < 5; i++)
+		{
+			if (cent < coins[i])
+				continue;
+			ans += (cent / coins[i]);
+			cent %= coins[i];
+		}
+	}
+	printf("%d\n", ans);
+
 	return (0);
 }
