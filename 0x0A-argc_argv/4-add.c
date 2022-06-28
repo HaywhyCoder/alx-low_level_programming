@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (isdigit(argv[i]))
+			if (isdigit(*argv[i]))
 				sum += atoi(argv[i]);
 			else
 			{
@@ -29,7 +29,6 @@ int main(int argc, char **argv)
 			}
 		}
 		printf("%d\n", sum);
-
-		return (0);
 	}
+	return (0);
 }

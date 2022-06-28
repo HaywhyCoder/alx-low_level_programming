@@ -12,11 +12,10 @@ int main(int argc, char **argv)
 {
 	int i;
 
-	while (argc > 0)
+	if (argc > 0)
 	{
-		for (i = 0, i < argc, i++)
+		for (i = 0; i < argc; i++)
 			printf("%s\n", argv[i]);
-		argc--;
 	}
 	return (0);
 }
