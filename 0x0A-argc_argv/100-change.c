@@ -15,7 +15,6 @@ int main(int argc, char *argv[])
 	int ans, i, cent, coins[5] = {25, 10, 5, 2, 1};
 
 	ans = 0;
-	cent = atoi(argv[1]);
 
 	if (argc != 2)
 	{
@@ -23,6 +22,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
+	cent = atoi(argv[1]);
 	while (cent > 0)
 	{
 		for (i = 0; i < 5; i++)
