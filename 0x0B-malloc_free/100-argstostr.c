@@ -35,6 +35,6 @@ char *argstostr(int ac, char **av)
 			ptr[c++] = av[i][j];
 		ptr[c++] = '\n';
 	}
-	ptr[size] = '\0';
+	ptr[len] = '\0';
 	return (ptr);
 }
