@@ -22,7 +22,7 @@ char *_strdup(char *str)
 
 	ptr = malloc(j + 1);
 	if (ptr == NULL)
-		return (NULL)
+		return (NULL);
 	while ((ptr[c] == str[c]) != '\0')
 		c++;
 
