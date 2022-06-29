@@ -9,10 +9,10 @@
  *         Otherwise - a pointer to an array of strings (words).
  */
 
-char **strtow(char *s)
+char **strtow(char *str)
 {
-	char **str = 0;
+	char **s = 0;
 
-	(void) s;
-	return (str);
+	(void) str;
+	return (s);
 }
