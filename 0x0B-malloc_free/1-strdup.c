@@ -12,18 +12,19 @@
 
 char *_strdup(char *str)
 {
-	int i = 0, j = 0, c = 0;
+	int i, j, c;
 	char *ptr;
 
+	i = j = c = 0;
 	if (str == NULL)
 		return (NULL);
 	while (str[i++])
 		j++;
 
-	ptr = malloc(j + 1);
+	ptr = malloc(sizeof(char) * (j + 1));
 	if (ptr == NULL)
 		return (NULL);
-	while ((ptr[c] == str[c]) != '\0')
+	while ((ptr[c] = str[c]) != '\0')
 		c++;
 
 	return (ptr);
