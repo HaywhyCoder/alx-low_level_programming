@@ -8,7 +8,7 @@
  *@size: size of array
  *@c: character
  *
- *Return:if size = 0 or function fails: 0 
+ *Return:if size = 0 or function fails: 0
  *       pointer to the allocated memory
  */
 
