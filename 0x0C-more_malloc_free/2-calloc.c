@@ -14,6 +14,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ptr;
+	char *dup;
 	unsigned int i, mem;
 
 	if (nmemb == 0 || size == 0)
@@ -24,8 +25,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (ptr == NULL)
 		return (NULL);
 
+	dup = ptr;
 	for (i = 0; i < mem; i++)
-		ptr[i] = 0;
+		dup[i] = 0;
 
 	return (ptr);
 }
