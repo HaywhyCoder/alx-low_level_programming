@@ -35,14 +35,13 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	ptrcpy = ptr;
 	nmem = malloc(new_size);
 	if (nmem == NULL)
+		free(ptr);
 		return (NULL);
 	nmemcpy = nmem;
 
-	for (i = 0; i < old_size; i++)
+	for (i = 0; i < old_size && i < new_size; i++)
 		nmemcpy[i] = ptrcpy[i];
 
 	free(ptr);
-	free(ptrcpy);
-	free(nmemcpy);
 	return (nmem);
 }
