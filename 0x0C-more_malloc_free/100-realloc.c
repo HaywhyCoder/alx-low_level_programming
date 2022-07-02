@@ -34,8 +34,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	for (i = 0; i < old_size; i++)
 		nmemcpy[i] = ptrcpy[i];
 
-	free (ptr);
-	free (ptrcpy);
-	free (nmemcpy);
+	free(ptr);
+	free(ptrcpy);
+	free(nmemcpy);
 	return (nmem);
 }
