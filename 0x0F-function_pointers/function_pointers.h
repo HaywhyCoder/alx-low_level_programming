@@ -1,5 +1,5 @@
-#ifndef FPTR-H
-#define FPTR_H
+#ifndef FUNCTION_POINTERS_H
+#define FUNCTION_POINTERS_H
 
 #include <stdlib.h>
 
