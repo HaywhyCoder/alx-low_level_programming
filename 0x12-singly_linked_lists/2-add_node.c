@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 
 int _strlen(char *s);
 list_t *add_node(list_t **head, const char *str);
