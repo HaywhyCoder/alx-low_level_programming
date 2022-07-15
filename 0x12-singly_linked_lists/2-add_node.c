@@ -2,7 +2,6 @@
 
 int _strlen(char *s);
 list_t *add_node(list_t **head, const char *str);
-char *_strdup(char *str);
 
 /**
  *_strlen - returns the length of the string
@@ -21,33 +20,6 @@ int _strlen(char *s)
 }
 
 /**
- *_strdup - returns a pointer to a new string which is a duplicate
- *           of the string str.
- *@str: string to be duplicated
- *
- *Return: if string = NULL or if memory is insufficient: NULL
- *        pointer to the duplicated string on success.
- */
-char *_strdup(char *str)
-{
-	int j, c;
-	char *ptr;
-
-	c = 0;
-	if (str == NULL)
-		return (NULL);
-
-	j = _strlen(str);
-	ptr = malloc(sizeof(char) * (j + 1));
-	if (ptr == NULL)
-		return (NULL);
-	while ((ptr[c] = str[c]) != '\0')
-		c++;
-
-	return (ptr);
-}
-
-/**
  *add_node - adds a new node at the beginning of the list
  *@head: pointer to the pointer to the head of the list
  *@str: string to be added
@@ -57,14 +29,24 @@ char *_strdup(char *str)
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *temp;
+	char *dup;
 
 	temp = malloc(sizeof(list_t));
 	if (temp == NULL)
-		return (0);
-	temp->str = _strdup(str);
+		return (NULL);
+
+	dup = strdup(str);
+	if (dup == NULL)
+	{
+		free(temp);
+		return (NULL);
+	}
+
+	temp->str = dup;
 	temp->len = _strlen(str);
 	temp->next = *head;
 
 	*head = temp;
-	return (*head);
+
+	return (temp);
 }
