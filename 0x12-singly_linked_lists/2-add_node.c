@@ -1,6 +1,6 @@
 #include "lists.h"
 
-int _strlen(char *s);
+int _strlen(const char *s);
 list_t *add_node(list_t **head, const char *str);
 
 /**
@@ -9,7 +9,7 @@ list_t *add_node(list_t **head, const char *str);
  *
  *Return: the length of the string checked
  */
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	int len = 0, i = 0;
 
