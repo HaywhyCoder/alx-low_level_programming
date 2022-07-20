@@ -16,6 +16,9 @@ listint_t *find_listint_loop(listint_t *head)
 
 	while (slow_p && fast_p && fast_p->next)
 	{
+		slow_p = slow_p->next;
+		fast_p = fast_p->next->next;
+
 		if (slow_p == fast_p)
 		{
 			slow_p = head;
@@ -26,8 +29,6 @@ listint_t *find_listint_loop(listint_t *head)
 			}
 			return (fast_p);
 		}
-		slow_p = slow_p->next;
-		fast_p = fast_p->next->next;
 	}
 	return (NULL);
 }
