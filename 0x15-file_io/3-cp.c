@@ -21,7 +21,7 @@ void close_file(int fd)
 
 int main(int argc, char **argv)
 {
-	int from,to, r, w;
+	int from, to, r, w;
 	char *buffer;
 	mode_t old_mask = umask(0);
 
